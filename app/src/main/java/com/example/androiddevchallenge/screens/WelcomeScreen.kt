@@ -3,7 +3,6 @@ package com.example.androiddevchallenge.screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -21,13 +20,18 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.compose.navigate
 import androidx.navigation.compose.rememberNavController
 import com.example.androiddevchallenge.screens.components.WelcomeResources
 import com.example.androiddevchallenge.ui.theme.MyTheme
+import com.example.androiddevchallenge.ui.theme.gray900
+import com.example.androiddevchallenge.ui.theme.white
 
 @Composable
 fun WelcomeScreen(navController: NavController) {
     val resources = WelcomeResources()
+
+    val isLightMode = MaterialTheme.colors.isLight
 
     Surface(color = MaterialTheme.colors.background) {
         Image(
@@ -58,15 +62,18 @@ fun WelcomeScreen(navController: NavController) {
                     .padding(start = 16.dp, end = 16.dp)
             ) {
                 Text(
-                    text = "Sign Up",
-                    style = MaterialTheme.typography.button
+                    text = "SIGN UP",
+                    style = MaterialTheme.typography.button,
+                    color = if (isLightMode) white else gray900
                 )
             }
 
             Spacer(modifier = Modifier.height(8.dp))
 
             Button(
-                onClick = { /*TODO*/ },
+                onClick = {
+                    navController.navigate("loginScreen"){}
+                },
                 shape = MaterialTheme.shapes.medium,
                 colors = buttonColors(backgroundColor = MaterialTheme.colors.secondary),
                 modifier = Modifier
@@ -75,7 +82,7 @@ fun WelcomeScreen(navController: NavController) {
                     .padding(start = 16.dp, end = 16.dp)
             ) {
                 Text(
-                    text = "Log In",
+                    text = "LOG IN",
                     style = MaterialTheme.typography.button
                 )
             }

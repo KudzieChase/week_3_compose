@@ -24,13 +24,13 @@ import androidx.compose.ui.unit.sp
 import com.example.androiddevchallenge.R
 
 val KulimPark = FontFamily(
-    Font(R.font.kulim_park_regular),
+    Font(R.font.kulim_park_regular, FontWeight.Normal),
     Font(R.font.kulim_park_light, FontWeight.Light)
 )
 
 val Lato = FontFamily(
     Font(R.font.lato_bold, FontWeight.Bold),
-    Font(R.font.lato_regular)
+    Font(R.font.lato_regular, FontWeight.Normal)
 )
 
 // Set of Material typography styles to start with
