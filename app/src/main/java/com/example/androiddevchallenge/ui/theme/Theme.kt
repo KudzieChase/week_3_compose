@@ -21,7 +21,6 @@ import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 
-
 private val LightColorPalette = lightColors(
     primary = gray900,
     secondary = rust600,
@@ -33,7 +32,6 @@ private val LightColorPalette = lightColors(
     onSurface = gray800
 )
 
-
 private val DarkColorPalette = darkColors(
     primary = white,
     secondary = rust300,
@@ -44,8 +42,6 @@ private val DarkColorPalette = darkColors(
     onBackground = taupe100,
     onSurface = white800
 )
-
-
 
 @Composable
 fun MyTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {

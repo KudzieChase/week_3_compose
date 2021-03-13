@@ -1,3 +1,18 @@
+/*
+ * Copyright 2021 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.example.androiddevchallenge.screens
 
 import androidx.compose.foundation.layout.Arrangement
@@ -95,7 +110,8 @@ fun HomeScreen(navController: NavController) {
         floatingActionButton = {
             FloatingActionButton(
                 backgroundColor = MaterialTheme.colors.primary,
-                onClick = { /*TODO*/ }) {
+                onClick = { /*TODO*/ }
+            ) {
                 Icon(
                     BottomNavIcon.Play.icon,
                     contentDescription = "home",
@@ -142,7 +158,7 @@ fun HomeScreen(navController: NavController) {
                             style = MaterialTheme.typography.h2,
                             modifier = Modifier
                                 .paddingFromBaseline(top = 40.dp, bottom = 8.dp),
-                            color = if(isLightMode) taupe800 else taupe100
+                            color = if (isLightMode) taupe800 else taupe100
                         )
                         LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             items(favoriteCollection) { item ->
@@ -160,7 +176,7 @@ fun HomeScreen(navController: NavController) {
                             style = MaterialTheme.typography.h2,
                             modifier = Modifier
                                 .paddingFromBaseline(top = 40.dp, bottom = 8.dp),
-                            color = if(isLightMode) taupe800 else taupe100
+                            color = if (isLightMode) taupe800 else taupe100
 
                         )
                         LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -173,7 +189,7 @@ fun HomeScreen(navController: NavController) {
                             style = MaterialTheme.typography.h2,
                             modifier = Modifier
                                 .paddingFromBaseline(top = 40.dp, bottom = 8.dp),
-                            color = if(isLightMode) taupe800 else taupe100
+                            color = if (isLightMode) taupe800 else taupe100
 
                         )
                         LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -196,7 +212,7 @@ fun ItemCircleRow(item: Item) {
     ) {
         GlideImage(
             data = item.image,
-            contentDescription="",
+            contentDescription = "",
             modifier = Modifier
                 .clip(CircleShape)
                 .height(88.dp)
@@ -225,7 +241,7 @@ fun ItemCardRow(item: Item) {
         ) {
             GlideImage(
                 data = item.image,
-                contentDescription="",
+                contentDescription = "",
                 modifier = Modifier
                     .padding(end = 16.dp)
                     .size(56.dp),

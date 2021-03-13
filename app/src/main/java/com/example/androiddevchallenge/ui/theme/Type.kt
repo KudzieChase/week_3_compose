@@ -44,7 +44,7 @@ val typography = Typography(
     h2 = TextStyle(
         fontSize = 15.sp,
         letterSpacing = 1.15.sp,
-        //Add CAPS
+        // Add CAPS
     ),
     h3 = TextStyle(
         fontSize = 14.sp,
@@ -62,11 +62,11 @@ val typography = Typography(
         fontWeight = FontWeight.Bold,
         letterSpacing = 1.15.sp,
         fontFamily = Lato,
-        //Add caps
+        // Add caps
     ),
     caption = TextStyle(
         fontSize = 12.sp,
         letterSpacing = 1.15.sp,
-        //Add caps
+        // Add caps
     ),
 )
