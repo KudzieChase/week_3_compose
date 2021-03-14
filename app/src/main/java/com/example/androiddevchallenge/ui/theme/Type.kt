@@ -44,6 +44,7 @@ val typography = Typography(
     h2 = TextStyle(
         fontSize = 15.sp,
         letterSpacing = 1.15.sp,
+        fontWeight = FontWeight.Normal
         // Add CAPS
     ),
     h3 = TextStyle(
@@ -56,6 +57,7 @@ val typography = Typography(
         fontSize = 14.sp,
         letterSpacing = 0.sp,
         fontFamily = Lato,
+        fontWeight = FontWeight.Normal
     ),
     button = TextStyle(
         fontSize = 14.sp,
@@ -67,6 +69,7 @@ val typography = Typography(
     caption = TextStyle(
         fontSize = 12.sp,
         letterSpacing = 1.15.sp,
+        fontWeight = FontWeight.Normal
         // Add caps
     ),
 )

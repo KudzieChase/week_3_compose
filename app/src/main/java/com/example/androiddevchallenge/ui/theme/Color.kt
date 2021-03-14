@@ -27,5 +27,5 @@ val gray800 = Color(0xFF333333).copy(alpha = .8f)
 
 // Dark Colors
 val rust300 = Color(0xFFE1AFAF)
-val white800 = Color(0xFF333333).copy(alpha = .8f)
+val white800 = Color(0xFFFFFFFF).copy(alpha = .8f)
 val white150 = Color(0xFFFFFFFF).copy(alpha = .15f)

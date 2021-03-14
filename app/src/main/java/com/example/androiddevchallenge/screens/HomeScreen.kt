@@ -59,13 +59,10 @@ import com.example.androiddevchallenge.model.favoriteCollection
 import com.example.androiddevchallenge.model.favoriteCollection2
 import com.example.androiddevchallenge.model.mindItems
 import com.example.androiddevchallenge.ui.theme.MyTheme
-import com.example.androiddevchallenge.ui.theme.gray800
 import com.example.androiddevchallenge.ui.theme.taupe100
 import com.example.androiddevchallenge.ui.theme.taupe800
-import com.example.androiddevchallenge.ui.theme.white800
 import com.example.androiddevchallenge.utils.BottomNavIcon
 import dev.chrisbanes.accompanist.glide.GlideImage
-import dev.chrisbanes.accompanist.insets.ProvideWindowInsets
 import dev.chrisbanes.accompanist.insets.navigationBarsPadding
 
 @Composable
@@ -145,11 +142,11 @@ fun HomeScreen(navController: NavController) {
                     },
                     label = {
                         Text(
-                            text = "Search",
-                            style = MaterialTheme.typography.body1,
-                            color = if (isLightMode) gray800 else white800
+                            text = "Search"
                         )
                     },
+                    singleLine = true,
+                    textStyle = MaterialTheme.typography.body1,
                     colors = TextFieldDefaults.textFieldColors(
                         backgroundColor = MaterialTheme.colors.surface,
                         textColor = MaterialTheme.colors.onSurface
@@ -205,7 +202,6 @@ fun HomeScreen(navController: NavController) {
                     }
                 }
             }
-
         }
     }
 }

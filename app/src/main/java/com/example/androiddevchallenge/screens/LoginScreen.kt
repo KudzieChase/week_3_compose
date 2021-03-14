@@ -86,13 +86,16 @@ fun LoginScreen(navController: NavController) {
                         color = if (isLightMode) gray800 else white800
                     )
                 },
+                textStyle = MaterialTheme.typography.body1,
+                singleLine = true,
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(56.dp)
                     .padding(start = 16.dp, end = 16.dp),
                 colors = TextFieldDefaults.textFieldColors(
+                    textColor = MaterialTheme.colors.onSurface,
                     backgroundColor = MaterialTheme.colors.surface,
-                    textColor = if (isLightMode) gray800 else white800
+                    unfocusedLabelColor = MaterialTheme.colors.onSurface
                 )
             )
 
@@ -104,17 +107,16 @@ fun LoginScreen(navController: NavController) {
                 label = {
                     Text(
                         text = "Password",
-                        style = MaterialTheme.typography.body1,
-                        color = if (isLightMode) gray800 else white800
                     )
                 },
+                textStyle = MaterialTheme.typography.body1,
+                singleLine = true,
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(56.dp)
                     .padding(start = 16.dp, end = 16.dp),
                 colors = TextFieldDefaults.textFieldColors(
-                    backgroundColor = MaterialTheme.colors.surface,
-                    textColor = if (isLightMode) gray800 else white800
+                    backgroundColor = MaterialTheme.colors.surface
                 )
             )
 
