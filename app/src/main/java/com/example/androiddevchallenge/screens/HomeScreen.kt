@@ -65,6 +65,8 @@ import com.example.androiddevchallenge.ui.theme.taupe800
 import com.example.androiddevchallenge.ui.theme.white800
 import com.example.androiddevchallenge.utils.BottomNavIcon
 import dev.chrisbanes.accompanist.glide.GlideImage
+import dev.chrisbanes.accompanist.insets.ProvideWindowInsets
+import dev.chrisbanes.accompanist.insets.navigationBarsPadding
 
 @Composable
 fun HomeScreen(navController: NavController) {
@@ -73,6 +75,7 @@ fun HomeScreen(navController: NavController) {
         bottomBar = {
             BottomNavigation(
                 backgroundColor = MaterialTheme.colors.background,
+                modifier = Modifier.navigationBarsPadding(),
                 elevation = 8.dp
             ) {
                 BottomNavigationItem(
@@ -124,7 +127,6 @@ fun HomeScreen(navController: NavController) {
     ) {
 
         Surface(color = MaterialTheme.colors.background) {
-
             Column(modifier = Modifier.fillMaxSize()) {
 
                 TextField(
@@ -148,7 +150,10 @@ fun HomeScreen(navController: NavController) {
                             color = if (isLightMode) gray800 else white800
                         )
                     },
-                    colors = TextFieldDefaults.textFieldColors(textColor = MaterialTheme.colors.onSurface)
+                    colors = TextFieldDefaults.textFieldColors(
+                        backgroundColor = MaterialTheme.colors.surface,
+                        textColor = MaterialTheme.colors.onSurface
+                    )
                 )
 
                 LazyColumn(modifier = Modifier.padding(horizontal = 16.dp)) {
@@ -200,6 +205,7 @@ fun HomeScreen(navController: NavController) {
                     }
                 }
             }
+
         }
     }
 }

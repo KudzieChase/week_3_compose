@@ -15,6 +15,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">@color/immersive_sys_ui</item>
         <!-- Customize your theme here. -->
         <item name="android:navigationBarColor">@color/nav_bar</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="Theme.AndroidDevChallenge.NoActionBar">

@@ -91,7 +91,8 @@ fun LoginScreen(navController: NavController) {
                     .height(56.dp)
                     .padding(start = 16.dp, end = 16.dp),
                 colors = TextFieldDefaults.textFieldColors(
-                    textColor = MaterialTheme.colors.onSurface
+                    backgroundColor = MaterialTheme.colors.surface,
+                    textColor = if (isLightMode) gray800 else white800
                 )
             )
 
@@ -112,7 +113,8 @@ fun LoginScreen(navController: NavController) {
                     .height(56.dp)
                     .padding(start = 16.dp, end = 16.dp),
                 colors = TextFieldDefaults.textFieldColors(
-                    textColor = MaterialTheme.colors.onSurface
+                    backgroundColor = MaterialTheme.colors.surface,
+                    textColor = if (isLightMode) gray800 else white800
                 )
             )
 
